@@ -1,5 +1,5 @@
 {
-  "name": "vite-remove-attributes-plugin-demo",
+  "name": "vite-remove-attributes-plugin",
   "private": true,
   "scripts": {
     "build": "turbo run build",
