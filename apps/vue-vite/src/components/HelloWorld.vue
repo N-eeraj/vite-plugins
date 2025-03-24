@@ -8,7 +8,7 @@ const count = ref(0)
 
 <template>
   <section>
-    <h1 data-cy="title">{{ msg }}</h1>
+    <h1 :data-cy="msg">{{ msg }}</h1>
 
     <div class="card">
       <button :data-cy="`increment button`" type="button" @click="count++">count is {{ count }}</button>

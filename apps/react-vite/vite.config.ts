@@ -7,6 +7,6 @@ import ViteReactRemoveAttributesPlugin from "vite-remove-attributes-plugin/ViteR
 export default defineConfig({
   plugins: [
     react(),
-    ViteReactRemoveAttributesPlugin(),
+    ViteReactRemoveAttributesPlugin("cy"),
   ],
 })

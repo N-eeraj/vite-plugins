@@ -6,6 +6,6 @@ import ViteVueRemoveAttributesPlugin from "vite-remove-attributes-plugin/ViteVue
 export default defineConfig({
   plugins: [
     vue(),
-    ViteVueRemoveAttributesPlugin(),
+    ViteVueRemoveAttributesPlugin("cy"),
   ],
 })

@@ -1,9 +1,11 @@
-const ViteReactRemoveAttributesPlugin = () => {
+const ViteReactRemoveAttributesPlugin = (dataAttr: string = "test") => {
   return {
     name: "vite-react-remove-attributes-plugin",
     enforce: "pre",
     transform(code: string, file: string) {
-      return /\.(jsx|tsx|js|ts)$/.test(file) ? code.replaceAll(/\s*data-cy=\{?\".*\"\}?/g, "") : code
+      const regex = new RegExp(`\\s*data-${dataAttr}=\\{?\\".*\\"\\}?`, "g")
+      const transformedCode = /\.(jsx|tsx|js|ts)$/.test(file) ? code.replaceAll(regex, "") : code
+      return transformedCode
     },
   } as const
 }

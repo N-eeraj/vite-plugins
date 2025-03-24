@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   vite: {
     plugins: [
-      ViteVueRemoveAttributesPlugin(),
+      ViteVueRemoveAttributesPlugin("cy"),
     ]
   }
 })
