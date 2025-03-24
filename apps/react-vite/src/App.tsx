@@ -3,7 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+console.log("")
+const x = 4
+console.log(x)
+
 function App() {
+  console.log("hi log")
+       console.warn("warning!!")   ;
+  console.error(`ERROR`);
+  console.info('i_n_f_o')
+  const obj = {rowA: 1, rowB: 2}   ; console.table(obj);
+
   const [count, setCount] = useState(0)
 
   return (

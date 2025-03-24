@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+  console.log("hi log")
+     console.warn("warning!!")   ;
+console.error(`ERROR`);
+console.info('i_n_f_o')
+const obj = {rowA: 1, rowB: 2}   ; console.table(obj);
 </script>
 
 <template>

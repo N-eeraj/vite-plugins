@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import ViteVueRemoveAttributesPlugin from "vite-remove-attributes-plugin/ViteVueRemoveAttributesPlugin"
+import ViteRemoveConsole from "vite-remove-attributes-plugin/ViteRemoveConsole"
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -10,6 +11,7 @@ export default defineNuxtConfig({
         "data-test",
         "data-cy",
       ]),
+      ViteRemoveConsole(),
     ]
   }
 })
