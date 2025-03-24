@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   vite: {
     plugins: [
-      ViteVueRemoveAttributesPlugin("cy"),
+      ViteVueRemoveAttributesPlugin([
+        "data-test",
+        "data-cy",
+      ]),
     ]
   }
 })

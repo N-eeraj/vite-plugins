@@ -9,23 +9,23 @@ function App() {
   return (
     <>
       <div>
-        <a data-cy="vite-link" href="https://vite.dev" target="_blank">
+        <a data-test="STATIC-DATA-TEST" aria-label="ARIA-LABEL" href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a data-cy="react-link" href="https://react.dev" target="_blank">
+        <a data-cy="STATIC-DATA-CY" aria-label="ARIA-LABEL" href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 data-cy={"title"}>Vite + React</h1>
+      <h1 data-test={"DYNAMIC-DATA-TEST"} aria-label="ARIA-LABEL">Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button data-cy="STATIC-DATA-CY" aria-label="ARIA-LABEL" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
+      <p data-cy={"DYNAMIC-DATA-CY"} aria-label="ARIA-LABEL" className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
