@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import ViteReactRemoveAttributesPlugin from "vite-remove-attributes-plugin/ViteReactRemoveAttributesPlugin"
-import ViteRemoveConsole from "vite-remove-attributes-plugin/ViteRemoveConsole"
+import ViteReactRemoveAttributesPlugin from "vite-plugins/ViteReactRemoveAttributesPlugin"
+import ViteRemoveConsole from "vite-plugins/ViteRemoveConsole"
 
 
 // https://vite.dev/config/
