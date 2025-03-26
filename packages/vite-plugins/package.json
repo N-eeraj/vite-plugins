@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugins",
+  "name": "@n-eeraj/vite-plugins",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -8,5 +8,8 @@
   },
   "exports": {
     "./*": "./dist/*.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
   }
 }

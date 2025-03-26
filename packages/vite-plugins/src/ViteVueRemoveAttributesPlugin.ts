@@ -1,4 +1,4 @@
-const ViteVueRemoveAttributesPlugin = (dataAttrs: Array<`data-${string}`> = []) => {
+const RemoveVueDataAttrs = (dataAttrs: Array<`data-${string}`> = []) => {
   return {
     name: "vite-vue-remove-attributes-plugin",
     enforce: "pre",
@@ -13,4 +13,4 @@ const ViteVueRemoveAttributesPlugin = (dataAttrs: Array<`data-${string}`> = []) 
   } as const
 }
 
-export default ViteVueRemoveAttributesPlugin
+export default RemoveVueDataAttrs

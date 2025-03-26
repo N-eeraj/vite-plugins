@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "outDir": "./dist"
-  }
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

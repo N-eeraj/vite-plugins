@@ -1,17 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import ViteReactRemoveAttributesPlugin from "vite-plugins/ViteReactRemoveAttributesPlugin"
-import ViteRemoveConsole from "vite-plugins/ViteRemoveConsole"
+import RemoveReactDataAttrs from "@n-eeraj/vite-plugins/ViteReactRemoveAttributesPlugin"
+import RemoveConsole from "@n-eeraj/vite-plugins/ViteRemoveConsolePlugin"
 
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    ViteReactRemoveAttributesPlugin([
+    RemoveReactDataAttrs([
       "data-test",
       "data-cy",
     ]),
-    ViteRemoveConsole(),
+    RemoveConsole(),
   ],
 })

@@ -1,16 +1,16 @@
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
-import ViteVueRemoveAttributesPlugin from "vite-plugins/ViteVueRemoveAttributesPlugin"
-import ViteRemoveConsole from "vite-plugins/ViteRemoveConsole"
+import RemoveVueDataAttrs from "@n-eeraj/vite-plugins/ViteVueRemoveAttributesPlugin"
+import RemoveConsole from "@n-eeraj/vite-plugins/ViteRemoveConsolePlugin"
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    ViteVueRemoveAttributesPlugin([
+    RemoveVueDataAttrs([
       "data-test",
       "data-cy",
     ]),
-    ViteRemoveConsole(),
+    RemoveConsole(),
   ],
 })
