@@ -1,5 +1,5 @@
 export interface ViteRemoveConsoleOptions {
   enabled?: boolean
-  skipFiles?: string[]
-  skipMethods?: Array<keyof typeof console>
+  excludeFiles?: string[]
+  exclude?: Array<keyof typeof console>
 }
