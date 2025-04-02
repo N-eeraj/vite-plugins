@@ -25,7 +25,7 @@ const ViteRemoveConsole = ({
         .filter((item) => !consoleMethodsToKeep.has(item as keyof Console))
 
       const regex = new RegExp(`\\s*console\.(${consoleMethodsToRemove.join("|")})\(.*\)\\s*;?`, "g")
-      const transformedCode = /\.(jsx|tsx|js|mjs|ts|vue)$/.test(file) ? code.replaceAll(regex, "\n") : code
+      const transformedCode = /\.(jsx|tsx|js|mjs|ts|vue|svelte)$/.test(file) ? code.replaceAll(regex, "\n") : code
       return transformedCode
     },
   } as const
