@@ -6,6 +6,11 @@ const DEFAULT_OPTIONS = {
   exclude: [],
 }
 
+const skipFiles = [
+  "/node_modules/",
+  "/.svelte-kit/",
+]
+
 const ViteRemoveConsole = ({
   enabled = true,
   excludeFiles = [],
@@ -16,7 +21,7 @@ const ViteRemoveConsole = ({
     enforce: "pre",
     transform(code: string, file: string) {
       if (!enabled) return code // return untransformed code if plugin is disabled
-      if (file.includes("/node_modules/")) return code // skip all node_module files
+      if (skipFiles.some(skipFile => file.includes(skipFile))) return code // skip all node_module files
       if (excludeFiles.some((skipFile) => file.endsWith(skipFile))) return code // return untransformed code if file is to be skipped
 
       // find console methods to remove by omitting wanted console methods
