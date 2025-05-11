@@ -1,16 +1,25 @@
 {
   "name": "@n-eeraj/vite-plugins",
-  "version": "1.0.0",
+  "version": "0.0.101",
+  "description": "Vite plugins to remove console statements and a framework/library based plugin that removes data-* attributes from builds with fine-grain controls.",
   "type": "module",
-  "private": true,
   "scripts": {
-    "build": "tsc && sh prepare.sh"
+    "build": "tsc && sh prepare.sh",
+    "package-publish": "npm run build && sh publish.sh"
   },
   "exports": {
     "./*": "./dist/*.js"
   },
+  "keywords": [
+    "vite plugins"
+  ],
   "types": "dist/index.d.ts",
+  "license": "ISC",
   "devDependencies": {
     "typescript": "^5.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/N-eeraj/vite-plugins"
   }
 }
