@@ -10,8 +10,12 @@ export default defineNuxtConfig({
       RemoveVueDataAttrs([
         "data-test",
         "data-cy",
-      ]),
-      RemoveConsole(),
+      ], {
+        enabled: process.env.STRIP_DATA_ATTRIBUTES === "true",
+      }),
+      RemoveConsole({
+        enabled: process.env.DISABLE_CONSOLE === "true",
+      }),
     ]
   }
 })

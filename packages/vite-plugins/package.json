@@ -4,11 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && sh prepare.sh"
   },
   "exports": {
     "./*": "./dist/*.js"
   },
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "typescript": "^5.8.2"
   }
