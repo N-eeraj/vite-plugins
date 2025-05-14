@@ -3,6 +3,7 @@ npm run build
 cp package.json dist/package.json
 cp README.md dist/README.md
 cd dist
+jq 'del(.scripts, .exports)' package.json > temp.json && mv temp.json package.json
 if [ "$1" == "dry" ]; then
   echo "Dry Run..."
   npm publish --access public --dry-run || { echo "Publish failed"; exit 1; }

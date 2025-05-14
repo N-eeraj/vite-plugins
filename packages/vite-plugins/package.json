@@ -1,6 +1,6 @@
 {
   "name": "@n-eeraj/vite-plugins",
-  "version": "0.0.101",
+  "version": "0.0.102",
   "description": "Vite plugins to remove console statements and a framework/library based plugin that removes data-* attributes from builds with fine-grain controls.",
   "type": "module",
   "scripts": {
